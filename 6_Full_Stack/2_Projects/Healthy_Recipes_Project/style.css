@@ -1,0 +1,44 @@
+img {
+  height: 150px;
+}
+
+h1 {
+  background-color: white;
+  opacity: 0.65;
+  text-align: center;
+}
+
+.ingredients {
+  background-color: white;
+  opacity: 0.75;
+  width: fit-content;
+  margin: 0 auto 0 0;
+  padding: 10px 20px;
+}
+
+.ingredients li {
+  font-weight: bold;
+  list-style: square;
+}
+
+.description {
+  font-size: 20px;
+}
+
+#cook-time {
+  font-weight: bold;
+}
+
+p.time {
+  color: gray;
+}
+
+.external-link {
+  color: SeaGreen;
+}
+
+body {
+  font-family: Helvetica;
+  background-image: url('https://previews.123rf.com/images/nadianb/nadianb1704/nadianb170400013/75204568-healthy-food-background-salad-ingredients-on-grey-concrete-table-with-copy-space-top-view.jpg');
+  background-size: cover;
+}

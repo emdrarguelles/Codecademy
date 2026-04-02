@@ -1,0 +1,218 @@
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+section {
+    scroll-margin-top: 80px; 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 3rem;
+}
+
+nav {
+    background: linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.4)), linear-gradient(to left, rgb(25, 151, 228), white);
+    color: white;
+    padding: 1.5rem .5rem;
+    flex: 1; /* takes all remaining space beside logo */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: stretch;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+  }
+  
+li {
+    list-style: none;
+    display: inline-block;
+  }
+
+a {
+    text-decoration: none;
+    padding: 4rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: black;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+      "banner banner"
+      "mission mission"
+      "menu reviews"
+      "team team";
+    grid-template-columns: 1fr 1fr;
+}
+
+.banner {
+    margin-top: 100px;
+    grid-area: banner;
+    background-image: linear-gradient(to bottom, transparent 99%, white), url(images/TLB_Folding_Area.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255, 0.75);
+}
+  
+#mission {
+    grid-area: mission;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 20px;
+    text-align: center;
+    background: linear-gradient(to top, rgb(25, 151, 228), white);
+}
+
+#mission h2 {
+    font-size: 2.5rem;
+}
+
+#mission p {
+    font-size: 1.25rem;
+    text-align: justify;
+    max-width: 45rem;
+    line-height: 4rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 45px;
+    background-color: rgb(255, 255, 255, 0.50);
+}
+
+
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(25, 151, 228), white);
+}
+
+#services h2 {
+    font-size: 2.5rem;
+}
+
+.service.menu { 
+    grid-area: menu;
+
+}
+
+.menu {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+}
+
+.disc p { 
+    font-size: 1rem;
+    font-style: italic;
+    text-align: justify;
+    max-width: 50rem;
+    line-height: 3rem;
+}
+
+
+#reviews { 
+    grid-area: reviews; 
+    display: flex-wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(25, 151, 228), white);
+}
+
+#reviews h2 {
+    font-size: 2.5rem;
+}
+
+#reviews p { 
+    font-size: 1.25rem;
+    text-align: justify;
+    max-width: 45rem;
+    line-height: 3rem;
+    border: 1px solid black;
+    padding: 60px;
+    background-color: rgb(255, 255, 255);
+}
+
+#team { 
+    grid-area: team; 
+    background: linear-gradient(to top, rgb(25, 151, 228), white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 2.5rem;
+}
+
+#team p { 
+    font-size: 1.25rem;
+    text-align: justify;
+    max-width: 45rem;
+    line-height: 3rem;
+}
+
+.group {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background: linear-gradient(to bottom, rgb(25, 151, 228), white);
+    color: black;
+    padding: 1.5rem 1.25rem;
+    flex: 1; /* takes all remaining space beside logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    height: auto;
+}

@@ -1,0 +1,77 @@
+a {
+  color: #2176FF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover, .logo {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #5495ff;
+}
+
+.btn {
+  font-family: 'Raleway',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px;
+  background: linear-gradient(white, lightyellow);
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow: 4px 8px;
+  transition: font-size .1s ease-in, box-shadow .1s ease-in, font-weight .1s ease-in;
+}
+
+.btn:active {
+  color: black;
+  border: 1px solid white;
+  font-size: 16px;
+  font-weight: normal;
+  box-shadow: 0 0;
+  background: linear-gradient(lightyellow, white);
+  transition: font-size .1s ease-in, color .1s ease-in, background-color .1s ease-in;
+}
+
+.activity {
+  font-family: 'Raleway',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 3px;
+  background: linear-gradient(white, lightblue);
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.activity:hover {
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 3px 6px;
+  transition: font-size .1s ease-in, box-shadow .1s ease-in, font-weight .1s ease-in;
+}
+
+.activity:active {
+  color: black;
+  border: 1px solid black;
+  font-size: 18px;
+  font-weight: normal;
+  box-shadow: 0 0;
+  background: linear-gradient(lightblue, white);
+  transition: font-size .1s ease-in, color .1s ease-in, background-color .1s ease-in;
+}

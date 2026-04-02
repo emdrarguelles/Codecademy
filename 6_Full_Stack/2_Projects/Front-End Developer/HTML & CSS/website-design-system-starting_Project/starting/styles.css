@@ -1,0 +1,208 @@
+html {
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center; /* vertical center */
+    background-color: gray;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+nav img {
+    width: 50px; /* adjust to whatever fits */
+    height: auto; /* keeps proportions */
+    border: 1px transparent;
+    border-radius: 50%;
+}
+
+.navigation {
+    display: flex;
+    gap: 16px; /* space between links */
+    list-style: none; /* removes the bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 40px;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/trees.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    margin-top: 70px;
+}
+
+h1 {
+    border: 1px transparent;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Merriweather", sans-serif;
+    font-size: 75px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 10px 25px;
+    align-self: flex-start;
+}
+
+#colors {
+    margin: 10px;
+    border: 2px solid white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#colors ul {
+    display: flex;
+    gap: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#colors li {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+
+#white {
+    border: 1px black solid;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gray {
+    border: 1px black solid;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#darkgray {
+    border: 1px black solid;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#black {
+    border: 1px black solid;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fonts {
+    margin: 10px;
+    border: 2px solid white;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.font-group {
+    flex: 1;
+    padding: 15px;
+}
+
+#roboto {
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.roboto {
+    font-family: roboto;
+}
+
+#montserrat {
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.montserrat {
+    font-family: montserrat;
+}
+
+#merriweather {
+    font-family: merriweather;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.merriweather {
+    font-family: merriweather;
+}
+
+#text {
+    margin: 10px;
+    border: 2px solid white;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.text-style {
+    flex: 1;
+    padding: 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center; /* vertical center */
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+}

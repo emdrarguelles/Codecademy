@@ -1,0 +1,215 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(84, 41, 41);
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 3rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3rem;
+    font-size: 1.25rem;
+ }
+
+main {
+    padding-top: 30px;
+}
+
+.banner {
+    background-image: url(../images/cafe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(61, 22, 4, 0.5);
+    border: 1px solid white;
+    padding: 80px 30px;
+    gap: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.box button {
+    font-family: inherit;
+    color: aliceblue;
+    background-color: brown;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 2px black;
+    text-transform: capitalize;
+}
+
+.box button:hover {
+    cursor: pointer;
+    box-shadow: 6px 5px 2px black;
+}
+
+
+section {
+    scroll-margin-top: 80px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+#about p, #events p {
+    max-width: 80rem;
+    line-height: 2rem;
+    padding: 0 2rem;
+}
+
+#events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+
+figcaption {
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.container img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 1px solid black;
+    box-shadow: 4px 4px 0px black;
+}
+
+.container img:hover {
+    border: 5px solid black;
+    box-shadow: 0px 0px;
+}
+
+.break {
+    background-color: rgb(48, 30, 30);
+    color: white;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(84, 41, 41);
+    color: white;
+}
+
+address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+    margin-bottom: 20px;
+}
+
+address span {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav a {
+        padding: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box h1 {
+        font-size: 1.5rem;
+    }
+}

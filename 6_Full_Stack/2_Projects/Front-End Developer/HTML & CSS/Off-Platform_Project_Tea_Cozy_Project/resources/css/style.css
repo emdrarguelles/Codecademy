@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.text {
+    line-height: 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid seashell;
+    height: 69px;
+    background-color: black;
+}
+
+nav img {
+    height: 50px;
+    width: auto;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navigation li {
+    display: inline-block;
+}
+
+.navigation li a {
+    color: inherit;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/img-mission-background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    margin-top: 69px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.tea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.question {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+figure img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+}
+
+.location {
+    background-image: url(../images/img-locations-background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.title {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    border: 1px black solid;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.place {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    line-height: 80px;
+
+}
+
+.place li {
+    align-items: center;
+}
+
+li.name {
+    font-weight: bold;
+}
+
+footer {
+    padding: 10px;
+    line-height: 80px;
+}
+
+.contact {
+    height: 200px;
+    margin-bottom: 50px;
+
+}
+
+.copyright {
+    text-align: left;
+}
+

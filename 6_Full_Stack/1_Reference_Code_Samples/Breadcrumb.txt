@@ -1,0 +1,34 @@
+Breadcrumb HTML
+
+    <ul class="breadcrumb">
+      <li class="location"><a href="#">Shop</a></li>
+      <li class="location"><a href="#">Groceries</a></li>
+      <li class="location"><a href="#">Blueberries</a></li>
+      <li class="attribute"><a href="#">Organic</a></li>
+    </ul>
+
+Breadcrumb CSS
+
+.breadcrumb > li {
+  display: inline;
+  text-align: left;
+}
+
+li.location+li.location::before {
+  content: " > ";
+}
+
+.breadcrumb a:hover {
+  color: red;
+}
+
+li.attribute {
+  color: gray;
+}
+
+li.attribute::after {
+  color: gray;
+  content: " x ";
+  font-size: 8px;
+  vertical-align: super; 
+}

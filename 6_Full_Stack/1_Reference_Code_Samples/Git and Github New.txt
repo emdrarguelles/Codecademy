@@ -1,0 +1,35 @@
+# 1. Navigate to where you want the project
+cd Documents/Projects
+
+# 2. Clone the repo
+git clone <github-url>
+
+# 3. cd into the newly created repo folder
+cd repo-name
+
+# 4. Create and switch to a new branch
+git checkout -b feature-branch
+
+# 5. Do your work... then stage and commit
+git add --all
+git commit -m "describe your changes"
+
+# 6. Push your branch to GitHub
+git push -u origin feature-branch
+Then on GitHub (browser):
+
+Open a Pull Request from feature-branch → main
+Teammates review your code
+Gets approved and merged into main ✅
+Click "Delete branch" button on GitHub to remove remote branch ✅
+
+Then back in Bash:
+bash# 7. Switch back to main
+git checkout main
+
+# 8. Pull the latest merged changes
+git pull origin main
+
+# 9. Delete your local branch (already merged so safe to delete)
+git branch -d feature-branch
+And if you're starting a new feature, repeat from step 4 with a fresh branch. That's the full loop! 🔄

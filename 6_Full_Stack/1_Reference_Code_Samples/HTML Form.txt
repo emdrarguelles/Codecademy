@@ -1,0 +1,30 @@
+<form action= where-to-send method= get/post>
+
+   <fieldset>
+   <legend> group label </legend>
+
+   <label for= matches-input-id> </label>
+
+   <input type=              name= what-you-call-it   value= text-or-boolean  id= matches-label-for>
+              text
+              number
+              range
+              checkbox
+              radio
+              submit
+              email
+              password
+              date
+              file
+
+   <select name=>
+      <option value=> </option>
+   </select>
+
+   <textarea name= rows= cols=> </textarea>
+
+   </fieldset>
+
+   <hr> divider line
+
+</form>

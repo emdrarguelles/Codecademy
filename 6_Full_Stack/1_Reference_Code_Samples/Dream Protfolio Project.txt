@@ -1,0 +1,34 @@
+# Dream Protfolio Project
+----
+
+>Ultimately after this course is done I want to be able to create a POS system that would replace our current utak.io subscription in our laundry. currently that service is charged monthly at 1500 and is overengineered for what I actually need.
+
+----
+## What I need
+
+1. A system with 7 pages:
+- Register (POS UI), Items (table to edit items on register)
+
+- Cashdrawer (shows money in register, starting cash, total sales per type, add expenses, add cash)
+
+- Staff (page for staff to login and logout)
+
+-Summary Dashboard) keep track of all transaction from POS and Staff logins
+
+-CRM (client directory of all clients to link to each transaction)
+
+-Systems (to edit all systems settings)
+
+2. POS UI to allow staff to punch in orders and total - an external link to a page that is customer facing that only shows what items are sold and total
+
+3. Ability to update the POS items via an table field on Items page
+
+4. Cashdrawer page that links to external receipt printer app connected to printer that also then tells our cash register to open every time we do a transaction type: cash.
+
+5.Staff to be able to login and logout on the staff page.
+
+6.Dashboard summary of all sales per day, and able to get monthly and date range summary
+
+7. CRM to add client info and link to each transaction to track how often they order. able to add new client data or modify
+
+8. System page to be able to add API and integration.

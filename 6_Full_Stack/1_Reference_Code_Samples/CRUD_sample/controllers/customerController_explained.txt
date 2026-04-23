@@ -1,0 +1,8 @@
+Breaking it down piece by piece:
+app.post() — POST is the HTTP method for creating new data. The URL is /api/customers.
+req.body — this is the data coming in from the frontend. Someone filled out a form with name, email, phone — that arrives here.
+db.query() — this talks to your PostgreSQL database. The INSERT INTO is SQL for "add a new row." The $1, $2, $3 are placeholders for safety — prevents SQL injection attacks.
+RETURNING * — tells the database to send back the newly created customer including their auto-generated ID.
+res.status(201).json() — sends the response back to the frontend. 201 means "Created" specifically.
+try/catch — there's your async error handling from today's lesson applied in a real backend context.
+The cool thing is you already understand almost everything here conceptually. You just haven't learned Express yet. When you get there it'll feel familiar rather than foreign.

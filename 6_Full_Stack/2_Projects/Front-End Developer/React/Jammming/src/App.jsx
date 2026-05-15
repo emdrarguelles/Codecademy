@@ -9,7 +9,11 @@ function App() {
   const [playlist, setPlaylist] = useState([]);
 
   function handleSearch(query) {
-    setResults([{ id: '1', name: query }]);
+    setResults([
+      { id: '1', name: 'Bohemian Rhapsody', artist: 'Queen', album: 'A Night at the Opera' },
+      { id: '2', name: 'Blinding Lights', artist: 'The Weeknd', album: 'After Hours' },
+      { id: '3', name: 'Levitating', artist: 'Dua Lipa', album: 'Future Nostalgia' },
+    ]);
   }
 
   function handleAdd(track) {

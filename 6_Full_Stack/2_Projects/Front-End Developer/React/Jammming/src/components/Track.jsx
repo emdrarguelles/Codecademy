@@ -5,7 +5,11 @@ export default function Track({ track, onAdd, onRemove, isPlaylist }) {
 
     return (
         <>
-            <p>{track?.name}</p>
+            <p>
+                {track?.name} <br/>
+                {track?.artist} | {track?.album}
+
+            </p>
             <button onClick={handleClick}>{isPlaylist ? '-' : '+'}</button>
         </>
     )

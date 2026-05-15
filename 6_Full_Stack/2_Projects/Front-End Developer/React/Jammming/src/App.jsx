@@ -10,18 +10,24 @@ function App() {
 
   function handleSearch(query) {
     setResults([
-      { id: '1', name: 'Bohemian Rhapsody', artist: 'Queen', album: 'A Night at the Opera' },
-      { id: '2', name: 'Blinding Lights', artist: 'The Weeknd', album: 'After Hours' },
-      { id: '3', name: 'Levitating', artist: 'Dua Lipa', album: 'Future Nostalgia' },
+      { id: '1', name: 'Bohemian Rhapsody', artist: 'Queen', album: 'A Night at the Opera', uri: 'spotify:track:1' },
+      { id: '2', name: 'Blinding Lights', artist: 'The Weeknd', album: 'After Hours', uri: 'spotify:track:2' },
+      { id: '3', name: 'Levitating', artist: 'Dua Lipa', album: 'Future Nostalgia', uri: 'spotify:track:3' },
     ]);
   }
 
   function handleAdd(track) {
-    setPlaylist(prev => [...prev, track])
+    setPlaylist(prev => [...prev, track]);
   }
 
   function handleRemove(track) {
-    setPlaylist(prev => prev.filter(t => t.id !== track.id))
+    setPlaylist(prev => prev.filter(t => t.id !== track.id));
+  }
+
+  function handleSave(name, uris) {
+    console.log('Playlist name:', name);
+    console.log('URIs:', uris);
+    setPlaylist([])
   }
 
 
@@ -35,7 +41,7 @@ function App() {
       </div>
       <div className="boards">
         <SearchResults results={results} onAdd={handleAdd} />
-        <Playlist tracks={playlist} onRemove={handleRemove} />
+        <Playlist tracks={playlist} onRemove={handleRemove} onSave={handleSave} />
       </div>
     </>
   )

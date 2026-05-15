@@ -2,18 +2,18 @@ import { useState } from 'react'
 import Searchbar from './components/SearchBar'
 import SearchResults from './components/SearchResults'
 import Playlist from './components/Playlist'
+import Spotify from './components/spotify'
 import './App.css'
 
 function App() {
   const [results, setResults] = useState([]);
   const [playlist, setPlaylist] = useState([]);
 
-  function handleSearch(query) {
-    setResults([
-      { id: '1', name: 'Bohemian Rhapsody', artist: 'Queen', album: 'A Night at the Opera', uri: 'spotify:track:1' },
-      { id: '2', name: 'Blinding Lights', artist: 'The Weeknd', album: 'After Hours', uri: 'spotify:track:2' },
-      { id: '3', name: 'Levitating', artist: 'Dua Lipa', album: 'Future Nostalgia', uri: 'spotify:track:3' },
-    ]);
+  async function handleSearch(query) {
+    const tracks = await Spotify.search(query);
+    if (tracks) {
+      setResults(tracks);
+    }
   }
 
   function handleAdd(track) {
@@ -24,10 +24,9 @@ function App() {
     setPlaylist(prev => prev.filter(t => t.id !== track.id));
   }
 
-  function handleSave(name, uris) {
-    console.log('Playlist name:', name);
-    console.log('URIs:', uris);
-    setPlaylist([])
+  async function handleSave(name, uris) {
+    await Spotify.savePlaylist(name, uris);
+    setPlaylist([]);
   }
 
 

@@ -27,10 +27,16 @@ function App() {
 
   return (
     <>
-      <h1>Jammming</h1>
-      <Searchbar onSearch={handleSearch} />
-      <SearchResults results={results} onAdd={handleAdd} />
-      <Playlist tracks={playlist} onRemove={handleRemove} />
+      <header className="header">
+        <h1>Ja<span>mmm</span>ing</h1>
+      </header>
+      <div className="hero">
+        <Searchbar onSearch={handleSearch} />
+      </div>
+      <div className="boards">
+        <SearchResults results={results} onAdd={handleAdd} />
+        <Playlist tracks={playlist} onRemove={handleRemove} />
+      </div>
     </>
   )
 }

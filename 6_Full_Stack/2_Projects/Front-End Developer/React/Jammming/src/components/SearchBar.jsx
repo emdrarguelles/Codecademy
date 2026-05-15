@@ -13,8 +13,8 @@ export default function SearchBar({ onSearch }) {
 
     return (
         <>
-            <input type='text' placeholder='Enter A Song Title' value={title} onChange={handleChange} />
-            <button onClick={handleClick}>SEARCH</button>
+            <input type='text' placeholder='Enter A Song Title' value={title} onChange={handleChange} className="search-input" />
+            <button onClick={handleClick} className="search-button">SEARCH</button>
         </>
     )
 

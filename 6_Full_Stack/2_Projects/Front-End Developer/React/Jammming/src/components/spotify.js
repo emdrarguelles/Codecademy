@@ -48,7 +48,7 @@ const Spotify = {
 
             const data = await response.json();
             accessToken = data.access_token;
-            window.history.pushState('', null, '/');
+            window.history.replaceState({}, document.title, redirectUri);
             localStorage.removeItem('pkce_verifier');
             return accessToken;
         }
@@ -85,57 +85,41 @@ const Spotify = {
           }
     },
 
-    async getUserId() {
-        const token = await this.getAccessToken()
-        const urlToFetch = 'https://api.spotify.com/v1/me'
-        
+    async createPlaylist(name) {
+        const token = await this.getAccessToken();
+    
         try {
-            const response = await fetch(urlToFetch, {
-                headers: {
-                    Authorization: `Bearer ${token}`
+            const response = await fetch(
+                'https://api.spotify.com/v1/me/playlists',
+                {
+                    method: 'POST',
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name,
+                        public: false
+                    })
                 }
-            })
-
-            if (response.ok) {
-              const jsonResponse = await response.json();
-              const userId = jsonResponse.id
-              return userId;
-            }
-          } catch (error) {
-            console.log(error);
-          }
-    },
-
-    async createPlaylist(userId, name) {
-        const token = await this.getAccessToken()
-        
-        try {
-            const response = await fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: name,
-                    public: false
-                })
-            });
+            );
+    
             const data = await response.json();
+    
+            console.log(data);
+    
             return data.id;
-            
+    
         } catch (error) {
             console.log(error);
         }
-
     },
 
     async savePlaylist(name, uris) {
-        const userId = await this.getUserId();
-        const playlistId = await this.createPlaylist(userId, name);
-
-        const token = await this.getAccessToken()
-        
+        const playlistId = await this.createPlaylist(name);
+    
+        const token = await this.getAccessToken();
+    
         try {
             await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/items`, {
                 method: 'POST',

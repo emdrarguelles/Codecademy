@@ -41,9 +41,9 @@ body {
   align-items: center;
   gap: 1rem;
   background-image: url("/background.png");
-  background-size: cover;
+  background-size: 70%;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .hero::after {

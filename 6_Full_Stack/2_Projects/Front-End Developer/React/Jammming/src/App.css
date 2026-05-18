@@ -118,6 +118,42 @@ body {
   border-bottom-color: #7b2fff;
 }
 
+.panel-footer {
+  padding-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.clear-button {
+  display: block;
+  margin: auto auto 0;
+  padding: 0.6rem 2rem;
+  background-color: transparent;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.clear-button:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: white;
+}
+
 /* SAVE BUTTON */
 .save-button {
   display: block;

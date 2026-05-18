@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(160deg, #1a0545 0%, #2d0b6b 40%, #0d0020 100%);
+  background: linear-gradient(160deg, #0a1628 0%, #0d2444 40%, #0a1020 100%);
   background-attachment: fixed;
   color: white;
   min-height: 100vh;
@@ -14,7 +14,7 @@ body {
 
 /* HEADER */
 .header {
-  background-color: #0d0d1a;
+  background-color: #0a1628;
   padding: 1rem 2rem;
   text-align: center;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 .header h1 span {
-  color: #7b2fff;
+  color: #4a9edd;
 }
 
 /* HERO */
@@ -66,7 +66,7 @@ body {
   position: relative;
   z-index: 1;
   padding: 0.6rem 2.5rem;
-  background-color: #0d0d1a;
+  background-color: #0a1628;
   color: white;
   border: none;
   border-radius: 999px;
@@ -77,7 +77,7 @@ body {
 }
 
 .search-button:hover {
-  background-color: #7b2fff;
+  background-color: #2e7db5;
 }
 
 /* BOARDS */
@@ -118,7 +118,7 @@ body {
 }
 
 .panel input:focus {
-  border-bottom-color: #7b2fff;
+  border-bottom-color: #4a9edd;
 }
 
 .panel-footer {
@@ -153,7 +153,7 @@ body {
 }
 
 .clear-button:hover {
-  border-color: rgba(255,255,255,0.5);
+  border-color: rgba(123, 155, 181, 0.5);
   color: white;
 }
 
@@ -162,7 +162,7 @@ body {
   display: block;
   margin: 1rem auto 0;
   padding: 0.6rem 2rem;
-  background-color: #7b2fff;
+  background-color: #2e7db5;
   color: white;
   border: none;
   border-radius: 999px;
@@ -174,7 +174,7 @@ body {
 }
 
 .save-button:hover {
-  background-color: #9b50ff;
+  background-color: #4a9edd;
 }
 
 /* TRACKLIST */
@@ -213,6 +213,6 @@ body {
 }
 
 .track-button:hover {
-  border-color: #7b2fff;
-  color: #7b2fff;
+  border-color: #4a9edd;
+  color: #4a9edd;
 }

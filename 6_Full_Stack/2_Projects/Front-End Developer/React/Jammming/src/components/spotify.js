@@ -99,6 +99,7 @@ const Spotify = {
                     },
                     body: JSON.stringify({
                         name,
+                        description: 'Created with Jammming',
                         public: false
                     })
                 }

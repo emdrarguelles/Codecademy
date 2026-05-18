@@ -68,7 +68,7 @@ body {
   position: relative;
   z-index: 1;
   padding: 0.6rem 2.5rem;
-  background-color: #0a1628;
+  background-color: #2e7db5;
   color: white;
   border: none;
   border-radius: 999px;
@@ -79,7 +79,7 @@ body {
 }
 
 .search-button:hover {
-  background-color: #2e7db5;
+  background-color: #0a1628;
 }
 
 /* BOARDS */

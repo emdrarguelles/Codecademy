@@ -1,5 +1,5 @@
 const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-const redirectUri = 'http://127.0.0.1:5173';
+const redirectUri = 'https://emdrargon-jammming.netlify.app';
 
 let accessToken;
 

@@ -1,4 +1,0 @@
-[build]
-  base = "Codecademy/6_Full_Stack/2_Projects/Front-End Developer/React/Jammming"
-  command = "npm run build"
-  publish = "dist"

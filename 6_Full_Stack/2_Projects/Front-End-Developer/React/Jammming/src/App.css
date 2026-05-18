@@ -44,8 +44,8 @@ body {
   background-size: 70%;
   background-position: center;
   background-repeat: repeat;
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
 .hero::after {
@@ -99,7 +99,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 1.5rem;
-  height: 500px;
+  min-height: 300px;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
 }

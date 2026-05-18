@@ -11,13 +11,28 @@ function App() {
   const [playlist, setPlaylist] = useState([]);
   const [localPlaylist, setLocalPlaylist] = useState([]);
   const [playlistName, setPlaylistName] = useState('');
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('jammming_playlists');
     if (saved) {
-      setLocalPlaylist(JSON.parse(saved));
+        setLocalPlaylist(JSON.parse(saved));
     }
+
+    // wait for token then run pending search
+    Spotify.getAccessToken().then(() => {
+        setIsReady(true);
+    });
   }, []);
+
+  useEffect(() => {
+    if (!isReady) return;
+    const pending = localStorage.getItem('pending_search');
+    if (pending) {
+        localStorage.removeItem('pending_search');
+        handleSearch(pending);
+    }
+  }, [isReady]);
 
   function handleSaveLocal(name, tracks) {
     const newPlaylist = { id: Date.now(), name,  tracks};

@@ -8,6 +8,7 @@ export default function SearchBar({ onSearch }) {
     }
 
     function handleClick() {
+        localStorage.setItem('pending_search', title);
         onSearch(title)
     }
 

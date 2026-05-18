@@ -18,7 +18,7 @@ export default function Playlist({ tracks, onRemove, onSave, onSaveLocal, onClea
         <div className="panel">
             <input type='text' placeholder='Playlist Name' onChange={(e) => onNameChange(e.target.value)} value={playlistName} />
             <Tracklist tracks={tracks} onRemove={onRemove} isPlaylist={true} />
-            {tracks.length === 0 && <div style={{ marginBottom: '5rem' }} />}
+            {tracks.length === 0 && <div style={{ marginBottom: '6rem' }} />}
             <div className="panel-footer">
                 <div className="btn-box">
                     <button className="save-button" onClick={handleSaveLocalClick}>Save to Local</button>

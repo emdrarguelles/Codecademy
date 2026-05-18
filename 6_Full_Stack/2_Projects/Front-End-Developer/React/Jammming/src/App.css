@@ -87,6 +87,7 @@ body {
   padding: 2rem;
   width: 100%;
   background: transparent;
+  align-items: flex-start;
 }
 
 .panel {
@@ -181,6 +182,8 @@ body {
 .tracklist {
   display: flex;
   flex-direction: column;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 /* TRACK */

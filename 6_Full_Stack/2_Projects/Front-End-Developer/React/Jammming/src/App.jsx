@@ -89,7 +89,7 @@ function App() {
       <header className="header">
         <h1>Ja<span>mmm</span>ing</h1>
       </header>
-      <div style={{ backgroundImage: 'url("/background.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="hero">
         <Searchbar onSearch={handleSearch} />
       </div>
       <div className="boards">

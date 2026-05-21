@@ -24,7 +24,7 @@
 }
 
 .nav-link-active {
-  background: #320059;
+  color: cyan;
 }
 
 .pet-type-label {

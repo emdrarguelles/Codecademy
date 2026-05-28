@@ -1,0 +1,28 @@
+{
+    "name": "react-audit-sandbox-jest-test-in-le",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "author": "",
+    "license": "ISC",
+    "scripts": {
+      "test": "jest"
+    },
+    "jest": {
+      "testEnvironment": "jsdom"
+    },
+    "devDependencies": {
+      "jest": "^29.0.0",
+      "babel-jest": "^29.0.0",
+      "@babel/core": "^7.0.0",
+      "@babel/preset-env": "^7.0.0",
+      "@babel/preset-react": "^7.0.0",
+      "@babel/plugin-transform-class-properties": "^7.0.0",
+      "regenerator-runtime": "^0.13.0",
+      "@testing-library/react": "^13.0.0",
+      "@testing-library/jest-dom": "^5.0.0",
+      "@testing-library/user-event": "^14.0.0",
+      "jest-environment-jsdom": "^29.0.0",
+      "prop-types": "^15.0.0"
+    }
+  }

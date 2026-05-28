@@ -1,0 +1,89 @@
+
+<style>
+  .wrap { padding: 1rem 0; font-size: 13px; }
+  h2 { font-size: 15px; font-weight: 500; margin: 0 0 4px; color: var(--color-text-primary); }
+  .subtitle { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 14px; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary); margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { padding: 6px 10px; text-align: left; font-weight: 500; font-size: 12px; color: var(--color-text-secondary); border-bottom: 1.5px solid var(--color-border-primary); }
+  td { padding: 6px 10px; vertical-align: top; border-bottom: 1px solid var(--color-border-tertiary); line-height: 1.6; font-size: 12px; }
+  td:first-child { width: 20%; }
+  td:nth-child(2) { width: 28%; }
+  td:nth-child(3) { width: 52%; }
+  code { font-family: var(--font-mono); font-size: 11px; background: var(--color-background-secondary); padding: 1px 5px; border-radius: 4px; }
+  .role { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-success); font-weight: 500; }
+  .tag { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-info); }
+  .freq { font-size: 10px; padding: 1px 6px; border-radius: 8px; font-weight: 500; }
+  .freq-high { background: rgba(15,110,86,0.12); color: var(--color-text-success); }
+  .freq-med { background: rgba(186,117,23,0.12); color: var(--color-text-warning); }
+  .freq-low { background: rgba(100,100,100,0.1); color: var(--color-text-secondary); }
+  .legend { display: flex; gap: 12px; margin-bottom: 14px; font-size: 11px; color: var(--color-text-secondary); align-items: center; }
+</style>
+<div class="wrap">
+  <h2>ARIA roles for <code>getByRole</code></h2>
+  <p class="subtitle">HTML elements map to these roles automatically — no extra attributes needed unless noted.</p>
+  <div class="legend">
+    <span><span class="freq freq-high">common</span> use often</span>
+    <span><span class="freq freq-med">situational</span> use when relevant</span>
+    <span><span class="freq freq-low">rare</span> good to know</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Inputs &amp; controls</div>
+    <table>
+      <thead><tr><th>Role</th><th>HTML element</th><th>Example query</th></tr></thead>
+      <tbody>
+        <tr><td><span class="role">textbox</span> <span class="freq freq-high">common</span></td><td><span class="tag">&lt;input type="text"&gt;</span><br><span class="tag">&lt;textarea&gt;</span></td><td><code>getByRole('textbox', {name: /username/i})</code></td></tr>
+        <tr><td><span class="role">searchbox</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;input type="search"&gt;</span></td><td><code>getByRole('searchbox', {name: /search/i})</code></td></tr>
+        <tr><td><span class="role">checkbox</span> <span class="freq freq-high">common</span></td><td><span class="tag">&lt;input type="checkbox"&gt;</span></td><td><code>getByRole('checkbox', {name: /agree/i})</code></td></tr>
+        <tr><td><span class="role">radio</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;input type="radio"&gt;</span></td><td><code>getByRole('radio', {name: /male/i})</code></td></tr>
+        <tr><td><span class="role">spinbutton</span> <span class="freq freq-low">rare</span></td><td><span class="tag">&lt;input type="number"&gt;</span></td><td><code>getByRole('spinbutton', {name: /quantity/i})</code></td></tr>
+        <tr><td><span class="role">slider</span> <span class="freq freq-low">rare</span></td><td><span class="tag">&lt;input type="range"&gt;</span></td><td><code>getByRole('slider', {name: /volume/i})</code></td></tr>
+        <tr><td><span class="role">combobox</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;select&gt;</span></td><td><code>getByRole('combobox', {name: /country/i})</code></td></tr>
+        <tr><td><span class="role">option</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;option&gt;</span></td><td><code>getByRole('option', {name: /philippines/i})</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Buttons &amp; links</div>
+    <table>
+      <thead><tr><th>Role</th><th>HTML element</th><th>Example query</th></tr></thead>
+      <tbody>
+        <tr><td><span class="role">button</span> <span class="freq freq-high">common</span></td><td><span class="tag">&lt;button&gt;</span><br><span class="tag">&lt;input type="button"&gt;</span></td><td><code>getByRole('button', {name: /submit/i})</code></td></tr>
+        <tr><td><span class="role">link</span> <span class="freq freq-high">common</span></td><td><span class="tag">&lt;a href="..."&gt;</span></td><td><code>getByRole('link', {name: /home/i})</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Text &amp; headings</div>
+    <table>
+      <thead><tr><th>Role</th><th>HTML element</th><th>Example query</th></tr></thead>
+      <tbody>
+        <tr><td><span class="role">heading</span> <span class="freq freq-high">common</span></td><td><span class="tag">&lt;h1&gt; – &lt;h6&gt;</span></td><td><code>getByRole('heading', {name: /welcome/i})</code></td></tr>
+        <tr><td><span class="role">paragraph</span> <span class="freq freq-low">rare</span></td><td><span class="tag">&lt;p&gt;</span></td><td><code>getByRole('paragraph')</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Structure &amp; layout</div>
+    <table>
+      <thead><tr><th>Role</th><th>HTML element</th><th>Example query</th></tr></thead>
+      <tbody>
+        <tr><td><span class="role">list</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;ul&gt; &lt;ol&gt;</span></td><td><code>getByRole('list')</code></td></tr>
+        <tr><td><span class="role">listitem</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;li&gt;</span></td><td><code>getAllByRole('listitem')</code></td></tr>
+        <tr><td><span class="role">img</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;img&gt;</span></td><td><code>getByRole('img', {name: /logo/i})</code></td></tr>
+        <tr><td><span class="role">table</span> <span class="freq freq-low">rare</span></td><td><span class="tag">&lt;table&gt;</span></td><td><code>getByRole('table')</code></td></tr>
+        <tr><td><span class="role">cell</span> <span class="freq freq-low">rare</span></td><td><span class="tag">&lt;td&gt;</span></td><td><code>getByRole('cell', {name: /price/i})</code></td></tr>
+        <tr><td><span class="role">dialog</span> <span class="freq freq-med">situational</span></td><td><span class="tag">&lt;dialog&gt;</span> or <code>role="dialog"</code></td><td><code>getByRole('dialog')</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="padding: 10px 12px; border-radius: 8px; background: var(--color-background-secondary); font-size: 12px; color: var(--color-text-secondary); line-height: 1.7;">
+    <strong style="color: var(--color-text-primary)">The name option</strong> — always matches the accessible name: label text, button text, image alt, or aria-label. Always use regex <code>/text/i</code> for case-insensitive matching.
+  </div>
+</div>

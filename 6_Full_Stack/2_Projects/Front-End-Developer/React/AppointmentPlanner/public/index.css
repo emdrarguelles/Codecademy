@@ -249,7 +249,7 @@ button[type="submit"]:active,
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
-  height: 130px;
+  min-height: 130px;
 }
 
 .delete-btn {

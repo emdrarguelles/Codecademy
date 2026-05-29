@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const ContactsPage = ({contacts, onAdd})  => {
+export const ContactsPage = ({contacts, onAdd, onDelete })  => {
   /*
   Define state variables for 
   contact info and duplicate check
@@ -36,16 +36,19 @@ export const ContactsPage = ({contacts, onAdd})  => {
  }, [currentName, contacts])
 
   return (
-    <div>
-      <section>
+    <div className="main-layout">
+      <div className="form-panel">
         <h2>Add Contact</h2> 
+        <p className="panel-subtext">Fill in the details below</p>
+        {isDuplicate && <p className="duplicate-warning">⚠ Name already exists</p>}
         <ContactForm name={currentName} setName={setCurrentName} number={currentNumber} setNumber={setCurrentNumber} email={currentEmail} setEmail={setCurrentEmail} handleSubmit={handleSubmit} />
-      </section>
-      <hr />
-      <section>
+      </div>
+      <div className="list-panel">
         <h2>Contacts</h2>
-        <TileList array={contacts} />
-      </section>
+        <div className="tile-list">
+          <TileList array={contacts} onDelete={onDelete} />
+        </div>
+      </div>
     </div>
   );
 };

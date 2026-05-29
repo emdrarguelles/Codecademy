@@ -17,15 +17,15 @@ function App() {
   contacts and appointments
   */
  const addContact = (name, number, email) => {
-  setContacts((prev) => ([
-    ...prev, {name, number, email}
-  ]))
+  setContacts((prev) => (
+    [...prev, {name, number, email}]
+  ))
  }
 
  const addAppointment = (name, number, email) => {
-  setAppointments((prev) => ([
-    ...prev, {name, number, email}
-  ]))
+  setAppointments((prev) => (
+    [...prev, {name, number, email}]
+  ))
  }
 
 

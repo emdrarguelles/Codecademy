@@ -31,7 +31,7 @@ export const AppointmentsPage = ({ appointments, contacts, onAdd}) => {
     <div>
       <section>
         <h2>Add Appointment</h2>
-        <AppointmentForm contacts={contacts} name={currentName} setName={setCurrentName} contact={currentContact} setContact={setCurrentContact} date={currentDate} setData={setCurrentDate} time={currentTime} setTime={setCurrentTime} handleSubmit={handleSubmit} />
+        <AppointmentForm contacts={contacts} title={currentName} setTitle={setCurrentName} contact={currentContact} setContact={setCurrentContact} date={currentDate} setData={setCurrentDate} time={currentTime} setTime={setCurrentTime} handleSubmit={handleSubmit} />
       </section>
       <hr />
       <section>

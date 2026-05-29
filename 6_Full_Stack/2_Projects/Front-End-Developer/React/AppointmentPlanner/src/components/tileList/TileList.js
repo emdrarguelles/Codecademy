@@ -1,17 +1,15 @@
 import React from "react";
 import { Tile } from  '../tile/Tile'
 
-export const TileList = ( { array, onDelete } ) => {
+export const TileList = ( { array, onDelete, onStatusUpdate } ) => {
   return (
-    <ul>
+    <div className="tile-list">
         {array.map((obj, index) => {
-          const { name, ...description } = obj
+          const { name, status, id, ...description } = obj
           return (
-            <div className="tile-list">
-              <Tile key={index} name={name} description={description} onDelete={onDelete} />
-            </div>
+            <Tile key={id || index} id={id} name={name} description={description} onDelete={onDelete} onStatusUpdate={onStatusUpdate} status={obj.status} />
           )
         })}
-    </ul>
+    </div>
   );
 };

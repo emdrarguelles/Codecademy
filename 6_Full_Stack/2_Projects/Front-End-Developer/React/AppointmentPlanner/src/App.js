@@ -33,30 +33,36 @@ function App() {
   */
  const addContact = (name, number, email) => {
   setContacts((prev) => (
-    [...prev, {name, number, email}]
+    [...prev, {id: Date.now(), name, number, email}]
   ))
  }
 
  const addAppointment = (name, contact, date, time) => {
   setAppointments((prev) => (
-    [...prev, {name, contact, date, time}]
+    [...prev, {id: Date.now(), name, contact, date, time}]
   ))
  }
 
- const deleteContact = (name) => {
-  setContacts((prev) => prev.filter((contact) => contact.name !== name))
+ const deleteContact = (id) => {
+  setContacts((prev) => prev.filter((contact) => contact.id !== id))
  }
 
- const deleteAppointment = (name) => {
-  setAppointments((prev) => prev.filter((appointment) => appointment.name !== name))
+ const deleteAppointment = (id) => {
+  setAppointments((prev) => prev.filter((appointment) => appointment.id !== id))
  }
+
+ const updateAppointmentStatus = (id, status) => {
+  setAppointments((prev) => prev.map((apt) => 
+    apt.id === id ? {...apt, status : apt.status === status ? "" : status} : apt
+  ))
+}
 
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root/> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} onAdd={addContact} onDelete={deleteContact} /> /* Add props to ContactsPage */ }/>
-      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} onAdd={addAppointment} onDelete={deleteAppointment} /> /* Add props to AppointmentsPage */ }/>
+      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} onAdd={addAppointment} onDelete={deleteAppointment} onStatusUpdate={updateAppointmentStatus} /> /* Add props to AppointmentsPage */ }/>
     </Route>
   ));
   

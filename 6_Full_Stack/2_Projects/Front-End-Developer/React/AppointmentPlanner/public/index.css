@@ -249,6 +249,7 @@ button[type="submit"]:active,
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
+  height: 130px;
 }
 
 .delete-btn {
@@ -334,6 +335,52 @@ button[type="submit"]:active,
 
 .empty-state p {
   font-size: 14px;
+}
+
+/* ─── STATUS ─────────────────────────────────────── */
+
+.tile-complete { border-color: #68D391; background: #F0FFF4; }
+.tile-complete::before { background: linear-gradient(90deg, #38A169, #68D391); }
+
+.tile-cancelled { border-color: #FC8181; background: #FFF5F5; }
+.tile-cancelled::before { background: linear-gradient(90deg, #E53E3E, #FC8181); }
+
+.status-buttons { display: flex; gap: 8px; margin-top: 12px; }
+
+.btn-complete {
+  flex: 1; padding: 6px; border: none; border-radius: 6px;
+  background: #C6F6D5; color: #276749; font-size: 12px;
+  font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+
+.btn-complete:hover { background: #68D391; color: white; }
+
+.btn-active-complete {
+  background: #68D391;
+  color: white;
+}
+
+.btn-complete.btn-inactive {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btn-cancelled {
+  flex: 1; padding: 6px; border: none; border-radius: 6px;
+  background: #FED7D7; color: #9B2C2C; font-size: 12px;
+  font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+
+.btn-cancelled:hover { background: #FC8181; color: white; }
+
+.btn-active-cancelled {
+  background: #FC8181;
+  color: white;
+}
+
+.btn-cancelled.btn-inactive {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* ─── SCROLLBAR ─────────────────────────────────────── */

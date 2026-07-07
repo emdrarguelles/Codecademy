@@ -61,7 +61,7 @@ class Field {
 
 
     print() {
-        console.clear();
+        process.stdout.write('\x1Bc');
         for (let i = 0; i < this.field.length; i++) {
             console.log(this.field[i]. join(''));
         }

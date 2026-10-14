@@ -1,0 +1,74 @@
+laundry-pos/
+├─ app/
+│  ├─ layout.tsx                          ← root layout: <html>, <body>, {children} (server)
+│  ├─ globals.css
+│  ├─ (auth)/                             ← route group, not in the URL; keeps login outside the sidebar
+│  │  └─ login/
+│  │     └─ page.tsx                      ← /login (server shell, client form inside)
+│  ├─ (register)/                         ← route group, not in the URL; full-screen layout, no sidebar
+│  │  ├─ layout.tsx                       ← full-screen touch layout (server)
+│  │  └─ register/                        ← real segment, so the page is at /register
+│  │     ├─ page.tsx                      ← fetches catalog, staff, next receipt number; passes as props (server)
+│  │     ├─ loading.tsx                   ← skeleton while the catalog loads (server)
+│  │     ├─ error.tsx                     ← 'use client', required for error boundaries
+│  │     ├─ actions.ts                    ← 'use server' at the top; checkout saves the sale
+│  │     ├─ receipt/
+│  │     │  └─ [receiptNo]/               ← dynamic segment, e.g. /register/receipt/9888
+│  │     │     └─ page.tsx                ← reprintable receipt (server)
+│  │     └─ _components/                  ← private folder, never becomes a route
+│  │        ├─ RegisterShell.tsx          (client) 'use client' boundary; holds the phone menu/summary view state
+│  │        ├─ RegisterShell.module.css   ← media query: one panel on phone, both on tablet
+│  │        ├─ CartProvider.tsx           (client) 'use client'; Context + useReducer for the cart
+│  │        ├─ ReceiptView.tsx            (server)
+│  │        ├─ catalog/                   ← left panel in your phone screenshot
+│  │        │  ├─ CatalogPanel.tsx        (client)
+│  │        │  ├─ StepTabs.tsx            (client) 1 Services / 2 Options / 3 Add-ons / 4 Delivery
+│  │        │  ├─ ItemGrid.tsx            (client)
+│  │        │  ├─ ItemTile.tsx            (client)
+│  │        │  ├─ OptionPicker.tsx        (client)
+│  │        │  ├─ CatalogSearch.tsx       (client)
+│  │        │  ├─ CustomerButton.tsx      (client)
+│  │        │  └─ TotalBar.tsx            (client) the green "P0 >" bar
+│  │        └─ summary/                   ← right panel in your phone screenshot
+│  │           ├─ SummaryPanel.tsx        (client)
+│  │           ├─ CartList.tsx            (client)
+│  │           ├─ CartLine.tsx            (client)
+│  │           ├─ EmptyCart.tsx           (client)
+│  │           ├─ ActionTabs.tsx          (client) Change / Discount / Service / Print
+│  │           ├─ QuickCashButtons.tsx    (client) P20, P50, P100...
+│  │           ├─ AmountInput.tsx         (client)
+│  │           ├─ TotalsBlock.tsx         (client) subtotal, total, change
+│  │           └─ PayButtons.tsx          (client) Charge, GCash, Maya; calls the Server Action
+│  └─ (dashboard)/                        ← route group, not in the URL; shares one layout
+│     ├─ layout.tsx                       ← Sidebar + header shell around every page in the group (server)
+│     ├─ page.tsx                         ← "/" home, inside the group so it gets the sidebar (server)
+│     ├─ dashboard/                       ← real segment, so the page is at /dashboard
+│     │  ├─ page.tsx                      ← reads searchParams, composes the screen (server)
+│     │  ├─ loading.tsx                   ← skeleton while the page loads (server)
+│     │  ├─ error.tsx                     ← 'use client', required for error boundaries
+│     │  └─ _components/
+│     │     ├─ LastSynced.tsx             (server)
+│     │     ├─ Greeting.tsx               (server) pin the time zone
+│     │     ├─ DashboardMenu.tsx          (client) three-dot menu
+│     │     ├─ StatsGrid.tsx              (server) async, awaits stats, wrapped in Suspense
+│     │     ├─ SalesByDate.tsx            (server) fetches sales rows, passes them down as props
+│     │     ├─ ViewTabs.tsx               (client) Hourly / Daily / Monthly
+│     │     ├─ SalesChart.tsx             (client) chart library + range slider
+│     │     └─ PaymentTypes.tsx           (server)
+│     ├─ transactions/
+│     │  ├─ layout.tsx                    ← renders TabNav, then {children} (server)
+│     │  ├─ page.tsx                      ← Details tab, /transactions; reads searchParams (server)
+│     │  ├─ loading.tsx                   (server)
+│     │  ├─ error.tsx                     ← 'use client'
+│     │  ├─ summary/
+│     │  │  └─ page.tsx                   ← Transactions tab (server)
+│     │  ├─ [period]/                     ← dynamic: hourly, daily, monthly share one page
+│     │  │  └─ page.tsx                   ← validate with notFound() (server)
+│     │  └─ _components/
+│     │     ├─ DateRangeForm.tsx          (client)
+│     │     ├─ DownloadButton.tsx         (client)
+│     │     ├─ TransactionsTable.tsx      (server)
+│     │     ├─ TableControls.tsx          (client) prev/next, page number, rows per page
+│     │     ├─ ColumnSearchRow.tsx        (client)
+│     │     ├─ TransactionRow.tsx         (server)
+│     │

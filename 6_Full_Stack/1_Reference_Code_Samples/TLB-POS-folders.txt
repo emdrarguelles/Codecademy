@@ -1,0 +1,199 @@
+laundry-pos/
+├─ app/
+│  ├─ layout.tsx
+│  ├─ globals.css
+│  ├─ (auth)/
+│  │  └─ login/
+│  │     └─ page.tsx
+│  ├─ (register)/
+│  │  ├─ layout.tsx
+│  │  └─ register/
+│  │     ├─ page.tsx
+│  │     ├─ loading.tsx
+│  │     ├─ error.tsx
+│  │     ├─ actions.ts
+│  │     ├─ receipt/
+│  │     │  └─ [receiptNo]/
+│  │     │     └─ page.tsx
+│  │     └─ _components/
+│  │        ├─ RegisterShell.tsx
+│  │        ├─ RegisterShell.module.css
+│  │        ├─ CartProvider.tsx
+│  │        ├─ ReceiptView.tsx
+│  │        ├─ catalog/
+│  │        │  ├─ CatalogPanel.tsx
+│  │        │  ├─ StepTabs.tsx
+│  │        │  ├─ ItemGrid.tsx
+│  │        │  ├─ ItemTile.tsx
+│  │        │  ├─ OptionPicker.tsx
+│  │        │  ├─ CatalogSearch.tsx
+│  │        │  ├─ CustomerButton.tsx
+│  │        │  └─ TotalBar.tsx
+│  │        └─ summary/
+│  │           ├─ SummaryPanel.tsx
+│  │           ├─ CartList.tsx
+│  │           ├─ CartLine.tsx
+│  │           ├─ EmptyCart.tsx
+│  │           ├─ ActionTabs.tsx
+│  │           ├─ QuickCashButtons.tsx
+│  │           ├─ AmountInput.tsx
+│  │           ├─ TotalsBlock.tsx
+│  │           └─ PayButtons.tsx
+│  └─ (dashboard)/
+│     ├─ layout.tsx
+│     ├─ page.tsx
+│     ├─ dashboard/
+│     │  ├─ page.tsx
+│     │  ├─ loading.tsx
+│     │  ├─ error.tsx
+│     │  └─ _components/
+│     │     ├─ LastSynced.tsx
+│     │     ├─ Greeting.tsx
+│     │     ├─ DashboardMenu.tsx
+│     │     ├─ StatsGrid.tsx
+│     │     ├─ SalesByDate.tsx
+│     │     ├─ ViewTabs.tsx
+│     │     ├─ SalesChart.tsx
+│     │     └─ PaymentTypes.tsx
+│     ├─ transactions/
+│     │  ├─ layout.tsx
+│     │  ├─ page.tsx
+│     │  ├─ loading.tsx
+│     │  ├─ error.tsx
+│     │  ├─ summary/
+│     │  │  └─ page.tsx
+│     │  ├─ [period]/
+│     │  │  └─ page.tsx
+│     │  └─ _components/
+│     │     ├─ DateRangeForm.tsx
+│     │     ├─ DownloadButton.tsx
+│     │     ├─ TransactionsTable.tsx
+│     │     ├─ TableControls.tsx
+│     │     ├─ ColumnSearchRow.tsx
+│     │     ├─ TransactionRow.tsx
+│     │     ├─ RowExpandButton.tsx
+│     │     ├─ RefundButton.tsx
+│     │     └─ SummaryTable.tsx
+│     ├─ reports/
+│     │  └─ page.tsx
+│     ├─ items/
+│     │  ├─ layout.tsx
+│     │  ├─ page.tsx
+│     │  ├─ loading.tsx
+│     │  ├─ error.tsx
+│     │  ├─ table/
+│     │  │  └─ page.tsx
+│     │  ├─ modifiers/
+│     │  │  └─ page.tsx
+│     │  └─ _components/
+│     │     ├─ EditingTips.tsx
+│     │     ├─ ItemsToolbar.tsx
+│     │     ├─ LastUpdated.tsx
+│     │     ├─ ItemsTable.tsx
+│     │     ├─ ItemGrid.tsx
+│     │     └─ ModifiersTable.tsx
+│     ├─ inventory/
+│     │  ├─ layout.tsx
+│     │  ├─ page.tsx
+│     │  ├─ loading.tsx
+│     │  ├─ error.tsx
+│     │  ├─ link-ingredients/
+│     │  │  └─ page.tsx
+│     │  ├─ tips/
+│     │  │  └─ page.tsx
+│     │  └─ _components/
+│     │     ├─ UploadCsvButton.tsx
+│     │     ├─ HelpVideoButton.tsx
+│     │     ├─ CreateIngredientForm.tsx
+│     │     ├─ IngredientSearch.tsx
+│     │     ├─ DayTabs.tsx
+│     │     ├─ DownloadIngredientsButton.tsx
+│     │     ├─ InventoryTable.tsx
+│     │     ├─ SortableHeader.tsx
+│     │     ├─ IngredientRow.tsx
+│     │     ├─ RowCheckbox.tsx
+│     │     └─ StockAdjustInput.tsx
+│     ├─ staff/
+│     │  ├─ layout.tsx
+│     │  ├─ page.tsx
+│     │  ├─ loading.tsx
+│     │  ├─ error.tsx
+│     │  ├─ totals/
+│     │  │  └─ page.tsx
+│     │  └─ _components/
+│     │     ├─ WeekDayTabs.tsx
+│     │     ├─ StaffGrid.tsx
+│     │     ├─ StaffCard.tsx
+│     │     ├─ ClockButtons.tsx
+│     │     └─ TotalsTable.tsx
+│     ├─ cash-drawer/
+│     │  ├─ page.tsx
+│     │  ├─ loading.tsx
+│     │  ├─ error.tsx
+│     │  └─ _components/
+│     │     ├─ CashInDrawer.tsx
+│     │     ├─ SummaryCards.tsx
+│     │     ├─ EditableAmount.tsx
+│     │     ├─ CashAddedPanel.tsx
+│     │     ├─ CashAddedForm.tsx
+│     │     ├─ ExpensePanel.tsx
+│     │     ├─ ExpenseFilterTabs.tsx
+│     │     ├─ ExpenseForm.tsx
+│     │     ├─ ExpenseList.tsx
+│     │     └─ ExpenseRowActions.tsx
+│     ├─ settings/
+│     │  ├─ layout.tsx
+│     │  ├─ page.tsx
+│     │  ├─ business-details/
+│     │  │  └─ page.tsx
+│     │  ├─ subscription/
+│     │  │  └─ page.tsx
+│     │  ├─ receipts/
+│     │  │  └─ page.tsx
+│     │  ├─ sales-inventory/
+│     │  │  └─ page.tsx
+│     │  ├─ online-store/
+│     │  │  └─ page.tsx
+│     │  ├─ customer-display/
+│     │  │  └─ page.tsx
+│     │  ├─ password-pin/
+│     │  │  └─ page.tsx
+│     │  ├─ devices/
+│     │  │  └─ page.tsx
+│     │  └─ _components/
+│     │     ├─ SettingsNav.tsx
+│     │     ├─ DismissibleBanner.tsx
+│     │     └─ BusinessDetailsForm.tsx
+│     └─ help/
+│        └─ page.tsx
+├─ components/
+│  ├─ sidebar/
+│  │  ├─ Sidebar.tsx
+│  │  ├─ SidebarNav.tsx
+│  │  ├─ SidebarToggle.tsx
+│  │  ├─ LogoutButton.tsx
+│  │  └─ nav-links.ts
+│  ├─ header/
+│  │  ├─ PageTitle.tsx
+│  │  └─ HeaderActions.tsx
+│  ├─ filters/
+│  │  └─ DateRangePicker.tsx
+│  └─ ui/
+│     ├─ TabNav.tsx
+│     └─ StatCard.tsx
+├─ lib/
+│  ├─ data/
+│  │  ├─ dashboard.ts
+│  │  ├─ transactions.ts
+│  │  ├─ items.ts
+│  │  ├─ inventory.ts
+│  │  ├─ staff.ts
+│  │  ├─ cash-drawer.ts
+│  │  └─ settings.ts
+│  ├─ cart.ts
+│  ├─ db.ts
+│  ├─ date.ts
+│  └─ types.ts
+├─ public/
+├─ tsconfig.json
+└─ package.json

@@ -1,0 +1,29 @@
+0. Scaffold	
+create-next-app, check the @/ alias, create every folder from the tree with an empty page.tsx that just shows its name, add nav-links.ts	Routing (you’ve done this)	1 session
+
+1. Shell	
+Root layout, (dashboard)/layout.tsx, Sidebar, SidebarNav (usePathname), SidebarToggle, header, TabNav	Layouts, client components	1-2 sessions
+
+2. Dashboard (static)	
+types.ts, StatCard, stats grid, PaymentTypes, Greeting, all with hardcoded numbers	Server Components	1-2 sessions
+
+3. Dashboard (live)	
+lib/data/dashboard.ts returning mock data with a fake delay, loading.tsx, <Suspense>, DateFilter that writes to the URL, searchParams driving the page, SalesChart	Data fetching, streaming	2-3 sessions
+
+4. Transactions	
+Tabs layout, table, pagination and column search through searchParams, expandable rows, [period] page	Dynamic routes, server/client split	3-4 sessions
+
+5. Cash Drawer	
+Summary cards, expense and cash-added forms, filter tabs, edit/delete	Forms and mutations (check whether the course covers Server Actions)	2-3 sessions
+
+6. Items, Inventory, Staff	
+Editable table, ingredient list with stock adjusting, clock IN/OUT cards	Reusing patterns from phases 3-5	1-2 weeks
+
+7. Settings	
+Layout with side nav, Business Details form, the other sections	Nested layouts, redirect	2-3 sessions
+
+8. Polish	
+next/image for staff photos, metadata, loading/error/not-found everywhere	The Optimization module	1-2 sessions
+
+9. Real backend	
+Replace the mock functions in lib/data/*.ts with a real database	Your PERN/NestJS side	Open-ended

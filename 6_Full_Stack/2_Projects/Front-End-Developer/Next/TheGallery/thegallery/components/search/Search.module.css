@@ -1,0 +1,25 @@
+.search_bar{
+    margin-bottom: 1em;
+  }
+  
+  .search_term{
+    line-height: 26px;
+    padding: 4px;
+    margin-right: 4px;
+    width: 25vw;
+    min-width: 150px;
+  }
+  
+  .search_button {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    background: #3A10E5;
+    color: #FFFAE5;
+    font-size: 16px;
+  }

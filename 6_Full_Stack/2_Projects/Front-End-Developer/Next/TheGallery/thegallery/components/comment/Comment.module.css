@@ -1,0 +1,42 @@
+.comments_section {
+    background: #FFFAE5;
+    padding: 1.5em;
+    margin: 1.5em 0em;
+    margin-top: 0em;
+    padding-top: 0em;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 100%;
+  }
+  
+  .comments {
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+  }
+  
+  .comment_form{
+    margin: 1em 0 0 0;
+  }
+  
+  .comment_form_text{
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  
+  .comments_date{
+    color: #9E9E9E;
+  }
+  
+  .post_button{
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    background: #3A10E5;
+    color: #FFFAE5;
+    font-size: 16px;
+  }

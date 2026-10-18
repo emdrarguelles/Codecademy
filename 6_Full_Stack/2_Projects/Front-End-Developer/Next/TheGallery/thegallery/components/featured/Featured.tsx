@@ -23,10 +23,12 @@ export default function Featured({
         alt={title}  
         width={500}  
         height={500}
-      />  
-      <p className={styles.title}>{title}</p>  
-      <p>{artistDisplayName}</p>  
-      <p>{objectDate}</p>
+      /> 
+      <div className={styles.caption}>
+        <p className={styles.title}>{title}</p>  
+        <p>{artistDisplayName}</p>  
+        <p>{objectDate}</p>
+      </div>
       <div className={styles.comments_section}>
         <Suspense fallback={<LoadingComments />}>
           <StoredComments id={objectID} />

@@ -7,8 +7,11 @@
     min-height: 100vh;
   }
   
-  .search_result{
-    
+  .search_result {
+    margin-bottom: 0.5em;
+    padding: 0.25em 0.8em;
+    border-radius: 0.4rem;
+    background: rgba(255, 250, 229, 0.8);
   }
   
   .description {

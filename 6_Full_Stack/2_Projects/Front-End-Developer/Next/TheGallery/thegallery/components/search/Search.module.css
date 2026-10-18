@@ -2,12 +2,14 @@
     margin-bottom: 1em;
   }
   
-  .search_term{
+  .search_term {
     line-height: 26px;
-    padding: 4px;
+    padding: 4px 12px;
     margin-right: 4px;
     width: 25vw;
     min-width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
   }
   
   .search_button {

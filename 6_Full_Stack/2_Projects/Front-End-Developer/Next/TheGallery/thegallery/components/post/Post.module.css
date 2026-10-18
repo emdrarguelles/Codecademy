@@ -3,18 +3,17 @@
   max-width: 46.875rem;
 }
   
-  .title {
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    font-size: 1.25rem;
-    font-weight: bold;
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-    font-family: var(--font-mono);
-    margin-top: 0.5em;
-  }
+.title {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  max-width: 100%;
+  z-index: 2;
+  margin-top: 0.5em;
+  padding: 0.25em 0.6em;
+  border-radius: 0.4rem;
+  background: rgba(255, 250, 229, 0.8);
+}
   
   .searchedImage {
     display: block;
